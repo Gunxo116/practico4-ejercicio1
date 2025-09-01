@@ -25,7 +25,7 @@ public class Menu extends javax.swing.JFrame {
         materias.add(new Materia(1, "Matemática I", 1));
         materias.add(new Materia(2, "Algoritmos", 1));
         materias.add(new Materia(3, "Análisis II", 2));
-        
+        materias.add(new Materia(4, "programacion", 1));
         
         
     }
