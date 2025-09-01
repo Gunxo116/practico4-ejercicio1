@@ -11,25 +11,23 @@ import java.util.HashSet;
 import javax.swing.JOptionPane;
 
 public class Menu extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Menu.class.getName());
-    
+
     public static HashSet<Alumno> alumnos = new HashSet<>();
     public static HashSet<Materia> materias = new HashSet<>();
-    
-    
+
     public Menu() {
         initComponents();
-        
+
         this.setLocationRelativeTo(null);
         materias.add(new Materia(1, "Matemática I", 1));
         materias.add(new Materia(2, "Algoritmos", 1));
         materias.add(new Materia(3, "Análisis II", 2));
-        
-        
-        
+
     }
-    @SuppressWarnings("unchecked")
+
+    @SuppressWarnings( "unchecked" )
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -127,7 +125,7 @@ public class Menu extends javax.swing.JFrame {
 
         jRegister.setText("Registrarse");
 
-        jRegisterMaterias.setText("Inscribirse  a una Materias");
+        jRegisterMaterias.setText("Inscribirse  a una Materia");
         jRegisterMaterias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRegisterMateriasActionPerformed(evt);
@@ -174,92 +172,109 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    
     private void jAgregarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarAlumnosActionPerformed
-        
+
         RegistarAlumnos agregaralumno = new RegistarAlumnos();
         jDesktopPane1.add(agregaralumno);
+        int x = (jDesktopPane1.getWidth() - agregaralumno.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - agregaralumno.getHeight()) / 2;
+        agregaralumno.setLocation(x, y);
         agregaralumno.setVisible(true);
-        
+
     }//GEN-LAST:event_jAgregarAlumnosActionPerformed
 
     private void jVerAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVerAlumnosActionPerformed
-         
-        if (Menu.alumnos.isEmpty()) {
+
+        if( Menu.alumnos.isEmpty() ) {
             JOptionPane.showMessageDialog(this, "No hay alumnos registrados.", "Sin datos", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         VerAlumnos veralu = new VerAlumnos();
         jDesktopPane1.add(veralu);
+        int x = (jDesktopPane1.getWidth() - veralu.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - veralu.getHeight()) / 2;
+        veralu.setLocation(x, y);
         veralu.setVisible(true);
-        
+
     }//GEN-LAST:event_jVerAlumnosActionPerformed
 
     private void jBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBorrarAlumnoActionPerformed
-        
+
         BorrarAlumno borrar = new BorrarAlumno();
         jDesktopPane1.add(borrar);
+        int x = (jDesktopPane1.getWidth() - borrar.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - borrar.getHeight()) / 2;
+        borrar.setLocation(x, y);
         borrar.setVisible(true);
-        
+
     }//GEN-LAST:event_jBorrarAlumnoActionPerformed
 
     private void jVerMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jVerMateriasActionPerformed
-        
+
         VerMaterias materiasver = new VerMaterias();
         jDesktopPane1.add(materiasver);
+        int x = (jDesktopPane1.getWidth() - materiasver.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - materiasver.getHeight()) / 2;
+        materiasver.setLocation(x, y);
         materiasver.setVisible(true);
     }//GEN-LAST:event_jVerMateriasActionPerformed
 
     private void jMateriasIncriptasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMateriasIncriptasActionPerformed
-        
-        MateriasIncriptas incriptas= new MateriasIncriptas();
-        jDesktopPane1.add(incriptas);
-        incriptas.setVisible(true);
-        
+
+        MateriasIncriptas inscriptas = new MateriasIncriptas();
+        jDesktopPane1.add(inscriptas);
+        int x = (jDesktopPane1.getWidth() - inscriptas.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - inscriptas.getHeight()) / 2;
+        inscriptas.setLocation(x, y);
+        inscriptas.setVisible(true);
+
     }//GEN-LAST:event_jMateriasIncriptasActionPerformed
 
     private void jSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSalirActionPerformed
     }//GEN-LAST:event_jSalirActionPerformed
 
     private void jSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSalirMouseClicked
-        int respuesta = JOptionPane.showConfirmDialog(this,  "Esta seguro ?","Confirmar Salir",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
-    if (respuesta == JOptionPane.YES_OPTION) {
-        dispose();
-        System.exit(0);
-    }
-    
+        int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro ?", "Confirmar Salir", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if( respuesta == JOptionPane.YES_OPTION ) {
+            dispose();
+            System.exit(0);
+        }
+
     }//GEN-LAST:event_jSalirMouseClicked
 
     private void jRegisterMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRegisterMateriasActionPerformed
-        
-        Register incriptas= new Register();
-        jDesktopPane1.add(incriptas);
-        incriptas.setVisible(true);
-        
+
+        Register inscriptas = new Register();
+        jDesktopPane1.add(inscriptas);
+        int x = (jDesktopPane1.getWidth() - inscriptas.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - inscriptas.getHeight()) / 2;
+        inscriptas.setLocation(x, y);
+        inscriptas.setVisible(true);
+
     }//GEN-LAST:event_jRegisterMateriasActionPerformed
 
     private void jbotonrRegisMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbotonrRegisMateriaActionPerformed
         RegistrarMateria epico = new RegistrarMateria();
         jDesktopPane1.add(epico);
+        int x = (jDesktopPane1.getWidth() - epico.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - epico.getHeight()) / 2;
+        epico.setLocation(x, y);
         epico.setVisible(true);
     }//GEN-LAST:event_jbotonrRegisMateriaActionPerformed
-    
-    
-    
+
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+            for( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels() ) {
+                if( "Nimbus".equals(info.getName()) ) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch( ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex ) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -287,9 +302,9 @@ public class Menu extends javax.swing.JFrame {
 }
 
 
-/* 
+/*
              /\_/\           ___
-            = o_o =_______    \ \ 
+            = o_o =_______    \ \
              __^      __(  \.__) )
          (@)<_____>__(_____)____/
  */

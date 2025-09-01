@@ -6,23 +6,20 @@ import practico4.ejercicio1.Alumno;
 import practico4.ejercicio1.Menu;
 
 public class VerAlumnos extends javax.swing.JInternalFrame {
-    
-    private DefaultTableModel modelo = new  DefaultTableModel();
-    
+
+    private DefaultTableModel modelo = new DefaultTableModel();
+
     public VerAlumnos() {
         initComponents();
-        
+
         this.setSize(500, 500);
         jTableAlumnos.setModel(modelo);
         armarCabecera();
         verAlumnos();
-        
-        
+
     }
-    
-    
-    
-    @SuppressWarnings("unchecked")
+
+    @SuppressWarnings( "unchecked" )
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -73,18 +70,17 @@ public class VerAlumnos extends javax.swing.JInternalFrame {
 
     private void jBotonRecargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotonRecargarActionPerformed
         modelo.setRowCount(0);
-        
-        if (Menu.alumnos.isEmpty()) {
+
+        if( Menu.alumnos.isEmpty() ) {
             JOptionPane.showMessageDialog(this, "No hay alumnos registrados.", "Sin datos", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        for (Alumno a : Menu.alumnos) { Object[] fila = { a.getLegajo(), a.getNombre(), a.getApellido() }; 
+        for( Alumno a : Menu.alumnos ) {
+            Object[] fila = {a.getLegajo(), a.getNombre(), a.getApellido()};
             modelo.addRow(fila);
         }
-        
-        
-    }//GEN-LAST:event_jBotonRecargarActionPerformed
 
+    }//GEN-LAST:event_jBotonRecargarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBotonRecargar;
@@ -93,18 +89,19 @@ public class VerAlumnos extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTableAlumnos;
     // End of variables declaration//GEN-END:variables
 
-    private void armarCabecera(){
+    private void armarCabecera() {
         modelo.addColumn("Legajo");
         modelo.addColumn("Nombre");
         modelo.addColumn("Apallido");
     }
-    
-    private void verAlumnos(){
-        
-        for (Alumno a : Menu.alumnos) { Object[] fila = { a.getLegajo(), a.getNombre(), a.getApellido() }; 
+
+    private void verAlumnos() {
+
+        for( Alumno a : Menu.alumnos ) {
+            Object[] fila = {a.getLegajo(), a.getNombre(), a.getApellido()};
             modelo.addRow(fila);
         }
-        if (Menu.alumnos.isEmpty()) {
+        if( Menu.alumnos.isEmpty() ) {
             JOptionPane.showMessageDialog(this, "No hay alumnos registrados.", "Sin datos", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
@@ -113,15 +110,9 @@ public class VerAlumnos extends javax.swing.JInternalFrame {
 }
 
 
-/* 
+/*
              /\_/\           ___
-            = o_o =_______    \ \ 
+            = o_o =_______    \ \
              __^      __(  \.__) )
          (@)<_____>__(_____)____/
  */
-    
-
-
-
-
-
