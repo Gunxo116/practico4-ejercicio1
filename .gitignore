@@ -22,4 +22,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 /dist/
+=======
+/nbproject/private/
+/build/
+>>>>>>> 626b9c59f8e20c04c7c4ae8199abc3b50fd28e43
